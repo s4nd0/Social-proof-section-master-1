@@ -1,0 +1,233 @@
+:root
+{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    font-size: 15px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.flex{display: flex;}
+.flex-row{flex-direction: row;}
+.flex-media
+{
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-x 
+{
+    margin-left: 1.5rem;
+}
+
+.m-y-3
+{
+    margin-top: 3rem;
+}
+.m-y-1
+{
+    margin-top: 1rem;
+}
+
+body
+{
+    font-family: 'League Spartan';
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.075);
+}   
+.text-left
+{
+    text-align: left;
+}
+
+main
+{
+    max-width: 1440px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+h1
+{
+    color: var(--very-dark-magenta);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+p
+{
+    color: var(--dark-grayish-magenta);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+.flex-media > div
+{
+    box-sizing: border-box;
+}
+
+.stars-box 
+{
+    width: 100%;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.stars-box > div
+{
+    box-sizing: border-box;
+    background-color: var(--light-grayish-magenta);
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.stars-box div + div 
+{
+    margin-top: 10px;
+}
+.star
+{
+    display: inline-block;
+    background-position: center;
+    background-size: cover;   
+    background-image: url(./images/icon-star.svg);
+    width: 1rem;
+    height: 1rem;
+    margin: 0 3px 3px;
+}
+
+.profile-box > div
+{
+    background-color: var(--very-dark-magenta);
+    border-radius: .5rem;
+    padding: 2rem 1.5rem;
+}
+
+.profile-picture
+{
+    display: inline-block;
+    background-position: center;
+    background-size: cover;  
+    width: 30px;
+    height: 30px; 
+    border-radius: 20px;
+}
+
+#profile-name
+{
+    color: white;
+}
+#profile-verified
+{
+    color: hsla(333, 80%, 67%, 0.603);;
+    font-size: 14px;
+}
+
+.profile-picture-colton {background-image: url(./images/image-colton.jpg);}
+.profile-picture-irene {background-image: url(./images/image-irene.jpg);}
+.profile-picture-anne {background-image: url(./images/image-anne.jpg);}
+
+.profile-box p
+{
+    color: white;
+    font-weight: 400;
+    text-align: left;
+}
+
+.attribution
+{
+    font-family: 'League Spartan';
+    font-size: 1rem;
+    color: var(--very-dark-magenta);
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.attribution a
+{
+    text-decoration: none;
+    color: var(--dark-grayish-magenta);
+}
+
+@media screen and (min-width: 670px) 
+{
+    body 
+    {
+        background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+    }
+
+    .m-x-2{margin-right: 3rem;}
+    .m-x-4{margin-right: 6rem;}
+
+    .flex-media{flex-direction: row;}
+
+    .star{margin-bottom: 0;}
+
+    .stars-box div + div {margin-top: 0;}
+
+    h1, p{text-align: left;}
+
+    h1{font-size: 3rem;}
+
+    .stars-box > div 
+    {
+        margin-bottom: 10px;
+        padding: 1rem 2rem;
+        min-width: 250px;
+        max-width: 400px;
+    }
+    .stars-box
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    #comment
+    {
+        margin-left: 2rem;
+
+    }
+    .m-y-1{margin-top: 0;}
+
+    .p-x-6
+    {
+        padding-right: 6rem;
+        max-width: 35%;
+    }
+
+    .profile-box
+    {
+        display: flex;
+    }
+
+    .profile-box > div 
+    {
+        height: 200px;
+        margin-left: .8rem;
+        margin-right: .8rem;
+    }
+
+    .m-y-2{margin-top: 1rem;}
+    .m-y-4{margin-top: 2rem;}
+}
